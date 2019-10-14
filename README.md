@@ -1,2 +1,3 @@
 # StringCar_M0_Express
-CircuitPython controller board for the LiPo BoomerPong chassis.
+
+A Circuit-Python compatible string car racer controller board.
