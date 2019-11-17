@@ -147,7 +147,7 @@ Wire Wire Line
 Text Notes 6900 2025 0    50   ~ 0
 Internal SPI on SERCOM2
 Text Notes 6900 2100 0    50   ~ 0
-8MB (64Mbit) Flash
+2MB (16Mbit) Flash
 Wire Wire Line
 	7200 1600 7750 1600
 Wire Wire Line
