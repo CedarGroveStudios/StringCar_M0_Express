@@ -6,8 +6,8 @@ $Descr USLegal 14000 8500
 encoding utf-8
 Sheet 1 1
 Title "StringCar_M0_Express"
-Date "2019-10-20"
-Rev "v04"
+Date "2020-01-18"
+Rev "v05"
 Comp "Cedar Grove Studios"
 Comment1 ""
 Comment2 ""
@@ -713,12 +713,12 @@ $Comp
 L switches:SW_SPDT SW2
 U 1 1 5D24DA51
 P 5400 7050
-F 0 "SW2" V 5325 7300 50  0000 C CNN
-F 1 "POWER" V 5400 7350 50  0000 C CNN
+F 0 "SW2" V 5300 6875 50  0000 C CNN
+F 1 "POWER" V 5375 6825 50  0000 C CNN
 F 2 "Adafruit:SW_SPDT_CK-JS102011SAQN" H 5400 7050 50  0001 C CNN
 F 3 "" H 5400 7050 50  0001 C CNN
 	1    5400 7050
-	0    1    1    0   
+	0    -1   1    0   
 $EndComp
 Text Label 6400 5850 0    50   ~ 0
 V+
@@ -1503,7 +1503,7 @@ F 10 "MOSFET P-CH 20V 4.2A SOT23" H 5300 6900 60  0001 L CNN "Description"
 F 11 "Diodes Incorporated" H 5300 7000 60  0001 L CNN "Manufacturer"
 F 12 "Active" H 5300 7100 60  0001 L CNN "Status"
 	1    5100 5900
-	1    0    0    -1  
+	1    0    0    1   
 $EndComp
 $Comp
 L dk_Transistors-FETs-MOSFETs-Single:DMG2305UX-13 Q2
@@ -1626,13 +1626,10 @@ Wire Wire Line
 Wire Wire Line
 	4250 6350 4550 6350
 Wire Wire Line
-	4250 6350 4250 5800
+	4250 6350 4250 6000
 Connection ~ 4250 6350
 Wire Wire Line
-	4250 5800 4700 5800
-Connection ~ 4250 5800
-Wire Wire Line
-	4250 5800 4250 5450
+	4250 6000 4700 6000
 Wire Wire Line
 	6400 6500 6550 6500
 Wire Wire Line
@@ -1731,4 +1728,7 @@ Wire Wire Line
 Connection ~ 6175 6350
 Wire Wire Line
 	6175 6350 6400 6350
+Connection ~ 4250 6000
+Wire Wire Line
+	4250 5450 4250 6000
 $EndSCHEMATC

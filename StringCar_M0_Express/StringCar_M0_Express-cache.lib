@@ -433,7 +433,7 @@ F8 "https://www.diodes.com/assets/Datasheets/DMG2305UX.pdf" 200 800 60 H I L CNN
 F9 "/product-detail/en/diodes-incorporated/DMG2305UX-13/DMG2305UX-13DICT-ND/4251589" 200 900 60 H I L CNN "DK_Detail_Page"
 F10 "MOSFET P-CH 20V 4.2A SOT23" 200 1000 60 H I L CNN "Description"
 F11 "Diodes Incorporated" 200 1100 60 H I L CNN "Manufacturer"
-F12 "Active" 200 1200 60 H I L CNN "Status"
+F12 "Active / Swapped D and S labels and pin numbers. JG 2020-01-18" 200 1200 60 H I L CNN "Status"
 DRAW
 C 0 -100 7 0 1 0 F
 C 0 75 7 0 1 0 F
@@ -459,8 +459,8 @@ P 4 0 1 0 -15 0 -65 -25 -65 25 -15 0 F
 P 4 0 1 0 0 -100 25 -100 25 100 0 100 N
 P 4 0 1 0 25 -25 0 -50 50 -50 25 -25 F
 X G 1 -400 100 200 R 50 50 1 1 B
-X S 2 0 -300 200 U 50 50 1 1 B
-X D 3 0 300 200 D 50 50 1 1 B
+X S 2 0 300 200 D 50 50 1 1 B
+X D 3 0 -300 200 U 50 50 1 1 B
 ENDDRAW
 ENDDEF
 #
@@ -566,6 +566,8 @@ C -80 0 20 0 0 0 N
 C 80 -100 20 0 0 0 N
 C 80 100 20 0 1 0 N
 P 2 0 1 0 -60 10 65 90 N
+P 2 0 1 0 65 90 40 90 N
+P 2 0 1 0 65 90 65 65 N
 X A 1 200 100 100 L 50 50 1 1 P
 X B 2 -200 0 100 R 50 50 1 1 P
 X C 3 200 -100 100 L 50 50 1 1 P
