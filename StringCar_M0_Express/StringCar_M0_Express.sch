@@ -36,7 +36,7 @@ F 3 "" H 7950 6900 50  0001 C CNN
 	1    7950 6900
 	1    0    0    -1  
 $EndComp
-Text Notes 5775 7625 0    50   ~ 0
+Text Notes 6325 7750 0    50   ~ 0
 Power Management
 $Comp
 L device:LED LED1
@@ -1731,4 +1731,6 @@ Wire Wire Line
 Connection ~ 4250 6000
 Wire Wire Line
 	4250 5450 4250 6000
+Text Notes 3850 7925 0    50   ~ 0
+WARNING: The stock schematic symbol for the\nDMG2305UX-13 provided by DigiKey incorrectly\nswapped source and drain. The corrected\nsymbol is shown here.
 $EndSCHEMATC
