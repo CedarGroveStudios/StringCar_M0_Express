@@ -1,0 +1,3 @@
+(sym_lib_table
+  (lib (name StringCar_M0_Express-rescue)(type Legacy)(uri ${KIPRJMOD}/StringCar_M0_Express-rescue.lib)(options "")(descr ""))
+)
