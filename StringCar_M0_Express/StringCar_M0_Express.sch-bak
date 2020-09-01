@@ -5,7 +5,7 @@ $Descr USLegal 14000 8500
 encoding utf-8
 Sheet 1 1
 Title "StringCar_M0_Express"
-Date "2020-07-31"
+Date "2020-08-05"
 Rev "v06"
 Comp "Cedar Grove Studios"
 Comment1 ""
