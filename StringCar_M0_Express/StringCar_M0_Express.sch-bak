@@ -1732,4 +1732,6 @@ Wire Wire Line
 	4250 5450 4250 6000
 Text Notes 3850 7925 0    50   ~ 0
 WARNING: The stock schematic symbol for the\nDMG2305UX-13 provided by DigiKey incorrectly\nswapped source and drain. The corrected\nsymbol is shown here.
+Text Notes 6000 5675 0    100  ~ 0
+Consider a TPS2000CDGNR\npower switch/manager chip
 $EndSCHEMATC
