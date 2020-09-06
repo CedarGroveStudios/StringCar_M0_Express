@@ -1,4 +1,4 @@
-# stringcar 2020-09-04 v08.py
+# stringcar 2020-09-05 v08.py
 # test of new motor control scheme
 
 import board
@@ -10,7 +10,7 @@ import adafruit_dotstar as dotstar
 import time
 import pulseio
 
-print("stringcar 2020-09-04 v08.py")
+print("stringcar 2020-09-05 v08.py")
 
 # set up dotstar indicator output (GBR orientation)
 dot = dotstar.DotStar(board.DOTSTAR_CI, board.DOTSTAR_DI, 1, brightness=0.5)
@@ -119,7 +119,7 @@ def get_batt():
     return 2 * (v_plus.value * 3.3) / 65536
 
 def flash(color=0, count=1, on=0.5, off=0.5):  # blink indexed colors
-    print('flash: blink indexed colors')
+    #print('flash: blink indexed colors')
     busy.value = True
     for i in range(count):
         if color == 0:
