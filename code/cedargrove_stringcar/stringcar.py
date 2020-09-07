@@ -1,4 +1,4 @@
-# stringcar 2020-09-05 v08.py
+# stringcar 2020-09-06 v08.py
 # test of new motor control scheme
 
 import board
@@ -20,8 +20,8 @@ busy = DigitalInOut(board.LED_STATUS)
 busy.direction = Direction.OUTPUT
 
 # set up motor controller outputs
-ain01 = pulseio.PWMOut(board.MOTOR_OUT_1, frequency=1900, duty_cycle=0)
-ain02 = pulseio.PWMOut(board.MOTOR_OUT_2, frequency=1900, duty_cycle=0)
+ain01 = pulseio.PWMOut(board.MOTOR_OUT_1, frequency=45, duty_cycle=0)
+ain02 = pulseio.PWMOut(board.MOTOR_OUT_2, frequency=45, duty_cycle=0)
 
 # set up EOS sensor switch input
 sensor_eos = DigitalInOut(board.SENSOR_IN)
