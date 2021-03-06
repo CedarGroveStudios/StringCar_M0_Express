@@ -1,6 +1,5 @@
-# stringcar 2021-03-05 v09.py
+# stringcar 2020-09-06 v08.py
 # test of new motor control scheme
-# add braking mode PWM control
 
 import board
 from microcontroller import cpu
@@ -11,7 +10,7 @@ import adafruit_dotstar as dotstar
 import time
 import pulseio
 
-print("stringcar 2021-03-05 v09.py")
+print("stringcar 2020-09-05 v08.py")
 
 # set up dotstar indicator output (GBR orientation)
 dot = dotstar.DotStar(board.DOTSTAR_CI, board.DOTSTAR_DI, 1, brightness=0.5)
@@ -74,19 +73,17 @@ def setup(motor_specs):
 def speed(vel, motor_params):  # set motor speed, -1.0 to +1.0
     busy.value = True
     stop_duty_cycle, min_duty_cycle, max_duty_cycle = motor_params
-    # brake mode thottle
-    run_duty_cycle = 0xFFFF - int(map_range(abs(vel), 0, 1.0, stop_duty_cycle, max_duty_cycle) * 0xFFFF)
     if vel > 0:  # forward
-        ain01.duty_cycle = 0xFFFF  # brake mode
-        ain02.duty_cycle = run_duty_cycle
-        dot[0] = [int(abs(vel) * 150), 0, 0]
+        ain01.duty_cycle = int(map_range(abs(vel), 0, 1.0, stop_duty_cycle, max_duty_cycle) * 0xFFFF)
+        ain02.duty_cycle = 0x0000
+        dot[0] = [int(abs(vel)*150), 0, 0]
         #print('forward')
     if vel < 0:  # reverse
-        ain01.duty_cycle = run_duty_cycle
-        ain02.duty_cycle = 0xFFFF  # brake mode
-        dot[0] = [0, 0, int(abs(vel) * 150)]
+        ain01.duty_cycle = 0x0000
+        ain02.duty_cycle = int(map_range(abs(vel), 0, 1.0, stop_duty_cycle, max_duty_cycle) * 0xFFFF)
+        dot[0] = [0, 0, int(abs(vel)*150)]
         #print('reverse')
-    if vel == None:  # coast (high impedance)
+    if vel == None:  # coast
         ain01.duty_cycle = 0x0000
         ain02.duty_cycle = 0x0000
         dot[0] = [75, 0, 64]  # COAST: pale yellow

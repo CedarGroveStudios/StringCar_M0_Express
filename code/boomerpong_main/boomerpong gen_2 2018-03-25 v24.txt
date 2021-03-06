@@ -1,3 +1,0 @@
-boomerpong gen_2 2018-03-22 v21.py
-Adafruit CircuitPython 2.1.0 on 2017-10-17; Adafruit Trinket M0 with samd21e18
-
