@@ -1,0 +1,2 @@
+Adafruit CircuitPython 7.1.1 on 2022-01-14; Cedar Grove StringCar M0 Express with samd21e18
+Board ID:stringcar_m0_express

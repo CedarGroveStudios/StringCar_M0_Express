@@ -1,5 +1,4 @@
-# stringcar 2022-01-24 v0924.py
-# version 0.924; updated for CircuitPython 7.1.1
+# stringcar 2021-03-05 v09.py
 # test of new motor control scheme
 # add braking mode PWM control
 
@@ -10,9 +9,9 @@ from analogio import AnalogIn
 from simpleio import map_range
 import adafruit_dotstar as dotstar
 import time
-import pwmio
+import pulseio
 
-print("stringcar 2022-01-24 v0924.py")
+print("stringcar 2021-03-05 v09.py")
 
 # set up dotstar indicator output (GBR orientation)
 dot = dotstar.DotStar(board.DOTSTAR_CI, board.DOTSTAR_DI, 1, brightness=0.5)
@@ -22,8 +21,8 @@ busy = DigitalInOut(board.LED_STATUS)
 busy.direction = Direction.OUTPUT
 
 # set up motor controller outputs
-ain01 = pwmio.PWMOut(board.MOTOR_OUT_1, frequency=25, duty_cycle=0)
-ain02 = pwmio.PWMOut(board.MOTOR_OUT_2, frequency=25, duty_cycle=0)
+ain01 = pulseio.PWMOut(board.MOTOR_OUT_1, frequency=25, duty_cycle=0)
+ain02 = pulseio.PWMOut(board.MOTOR_OUT_2, frequency=25, duty_cycle=0)
 
 # set up EOS sensor switch input
 sensor_eos = DigitalInOut(board.SENSOR_IN)
@@ -37,7 +36,7 @@ v_plus = AnalogIn(board.VOLTAGE_MONITOR)
 #ctl = AnalogIn(board.D1)
 
 # set up piezo output
-piezo = pwmio.PWMOut(board.PIEZO, duty_cycle=0, frequency=440, variable_frequency=True)
+piezo = pulseio.PWMOut(board.PIEZO, duty_cycle=0, frequency=440, variable_frequency=True)
 
 def setup(motor_specs):
     busy.value = True
